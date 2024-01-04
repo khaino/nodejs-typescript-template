@@ -8,4 +8,4 @@ Dev: `npm run dev`
 4. `npx tsc --init`
 
 ### Version
-Node: v20.10.0
+Node: `v20.10.0`
