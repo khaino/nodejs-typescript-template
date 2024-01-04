@@ -1,4 +1,4 @@
-import express from "express";
+import express, { json } from "express";
 import { userRouter, healthRouter } from "./routes";
 import { logger, addTimestamp, handleError } from "./middlewares";
 
@@ -11,7 +11,7 @@ app.use(logger);
 app.get("/", (req, res) => {
     res.send("Hello World!");
 });
-
+app.use(json());
 app.use("/health", healthRouter);
 app.use("/users", userRouter);
 

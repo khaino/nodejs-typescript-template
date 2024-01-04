@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { Router, Request, Response } from "express";
 
 export const router = Router();
 
@@ -15,4 +15,12 @@ const users: Record<string, string> = {
 // router.get("/:id", middleWareFunction1, middleWareFunction2, (req, res) => {})
 router.get("/:id", (req, res) => {
     res.send(`Hello ${users[req.params.id]}`);
+});
+
+router.post("/", (req: Request, res: Response) => {
+    res.send({
+        message: "Create a new user",
+        timestamp: req.timestamp,
+        data: req.body,
+    });
 });
