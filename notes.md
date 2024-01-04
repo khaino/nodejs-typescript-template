@@ -6,3 +6,6 @@ Dev: `npm run dev`
 2. `npm install express`
 3. `npm install --save-dev typescript @types/express`
 4. `npx tsc --init`
+
+### Version
+Node: v20.10.0
